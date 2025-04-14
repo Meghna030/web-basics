@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Wonders Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    nav {
+      background-color: #222;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+    .item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .item p {
+      padding: 10px;
+    }
+    .item button {
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .item button:hover {
+      background-color: #555;
+    }
+    #about {
+      background-color: #eee;
+      text-align: center;
+    }
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      margin: 20px;
+    }
+    #contact {
+      background-color: #ddd;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    button[type="submit"] {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+    .popup button {
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+  <h1>Welcome to World Wonders Gallery</h1>
+  <p style="text-align:center;">Explore the most breathtaking locations on Earth, from hidden valleys to iconic landmarks.</p>
+</section>
+
+<!-- Image Gallery -->
+<section id="gallery">
+  <h2>Photo Gallery</h2>
+
+  <!-- Updated 15 Beautiful Images -->
+  <div class="item"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Mountains"><p>Snowy Peaks in Switzerland</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Beach"><p>Tranquil Beach in Maldives</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800" alt="Forest"><p>Foggy Forest in Canada</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1508873699372-7ae7d03a5917?w=800" alt="Waterfall"><p>Majestic Waterfall in Iceland</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?w=800" alt="Desert"><p>Sahara Desert Dunes</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800" alt="City"><p>Nightlife in New York</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1624953587687-57d9f63a1471?w=800" alt="Field"><p>Golden Fields in Ukraine</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Island"><p>Relaxing Tropics in Fiji</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1563720227150-096288f7ff86?w=800" alt="Temple"><p>Ancient Temples in Cambodia</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Bridge"><p>Golden Gate Bridge</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800" alt="Jungle"><p>Amazon Jungle</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1617093728114-df2367cd9a6d?w=800" alt="Aurora"><p>Aurora over Norway</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?w=800" alt="Canyon"><p>Grand Canyon, USA</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1602751581908-067634a9f3d0?w=800" alt="Lake"><p>Reflection on Lake Bled</p><button>View More</button></div>
+  <div class="item"><img src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62?w=800" alt="Volcano"><p>Active Volcano in Hawaii</p><button>View More</button></div>
+
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About This Project</h2>
+  <p>This gallery is curated to showcase the beauty of our planet. Each image is a window to a destination filled with adventure, culture, and stunning scenery.</p>
+  <p>We aim to inspire travel lovers and nature enthusiasts to discover the wonders Earth has to offer.</p>
+  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400" alt="Author">
+  <p><strong>Photographer: Jane Explorer</strong></p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required/>
+    <input type="email" name="email" placeholder="Your Email" required/>
+    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <p>Thank you for reaching out! We'll get back to you soon.</p>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("popup").style.display = "block";
+  });
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
